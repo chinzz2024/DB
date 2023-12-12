@@ -1,0 +1,17 @@
+DELIMITER //
+
+CREATE PROCEDURE T(n INT)
+BEGIN
+    DECLARE b INT DEFAULT 0;
+    DECLARE c INT DEFAULT 1;
+
+    WHILE c <= n DO
+        SET b = b + c;
+        SET c = c + 1;
+    END WHILE;
+
+    SELECT b;
+END //
+
+DELIMITER ;
+
