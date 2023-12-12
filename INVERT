@@ -1,0 +1,12 @@
+delimiter //
+ create procedure invert (a int)
+ begin
+ declare b int;
+ set b=0;
+ while a>0 do
+ set b=(b*10)+mod(a,10);
+ set a=floor(a/10);
+ end while;
+ select b;
+ end;
+//
